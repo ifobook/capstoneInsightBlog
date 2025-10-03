@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs") %>
+
+
+<body>
+<%- include("partials/nav.ejs",  {page: "create"}) %>
+
+    <!-- Blog Form -->
+    <main class="container py-5">
+        <div class="card p-4">
+            <h2 class="mb-4">Create a New Blog Post</h2>
+            <form action="createPost" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Post Title</label>
+                    <input type="text" name="title" class="form-control" placeholder="Enter post title" >
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+                    <select class="form-select" title="category" >
+                        <option value="">Choose...</option>
+                        <option>Design</option>
+                        <option>Development</option>
+                        <option>Culture</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Cover Image</label>
+                    <input class="form-control" name="image" value="https://picsum.photos/600/400?random=3" type="text" accept="image/*">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Content</label>
+                    <textarea class="form-control" name="body" rows="6" placeholder="Write your blog content..."
+                        ></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tags</label>
+                    <input type="text" name="tag" class="form-control" placeholder="e.g. design, bootstrap, ui">
+                </div>
+                <button type="submit" class="btn btn-primary">Publish</button>
+                <button type="reset" class="btn btn-outline-secondary ms-2">Reset</button>
+            </form>
+        </div>
+    </main>
+
+<%- include("partials/footer.ejs") %>

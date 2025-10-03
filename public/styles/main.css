@@ -1,0 +1,25 @@
+body {
+    background: #f8f9fa;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.post-card {
+    transition: transform .18s ease, box-shadow .18s ease
+}
+
+.post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08)
+}
+
+.post-meta {
+    font-size: .85rem;
+    color: #6c757d
+}
+
+footer {
+    background: #fff;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e9ecef
+}

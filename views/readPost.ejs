@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+    <body>
+        <!-- Navbar -->
+        <%- include("partials/nav.ejs", {page: "posts" }) %>
+            <main class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <article class="card p-4 shadow-sm border-0">
+                            <header class="mb-4 post-header">
+                                <h1 class="fw-bold mb-3">
+                                    <%= blogTitle %>
+                                </h1>
+                                
+                                <% if (locals.blogImage) { %>
+                                    <img src="<%= blogImage %>" class="w-100 mb-4" alt="<%= blogTitle %>">
+                                    <% } %>
+                            </header>
+                            <section>
+                                <p>
+                                    <%= blogBody %>
+                                </p>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </main>
+            <%- include("partials/footer.ejs") %>
